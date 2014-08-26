@@ -9,7 +9,12 @@ if ( ! function_exists( 'fabel_bootstrap_setup' ) ) :
 		if ( ! isset( $content_width ) ) $content_width = 900;
 
 		// Language Translations
-		load_theme_textdomain( 'fabel_bootstrap', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'fabel_bootstrap', TEMPLATEPATH.'/languages' );
+
+		$locale = get_locale();
+		$locale_file = TEMPLATEPATH."/languages/$locale.php";
+		if ( is_readable($locale_file) )
+		require_once($locale_file);
 
 		// Custom Editor Style Support
 		add_editor_style();
