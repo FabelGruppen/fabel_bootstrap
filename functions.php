@@ -135,6 +135,23 @@ function create_post_type() {
         'hierarchical' => true,
         'supports' => array( 'title', 'editor', 'thumbnail')
     ));
+
+    register_post_type('slider', array(
+        'labels' => array(
+            'name' => 'Slider',
+            'singular_name' => 'Slide',
+            'add_new' => 'New slide',
+            'edit_item' => 'Edit slide',
+            'new_item' => 'New slide',
+            'view_item' => 'View slide',
+            'search_items' => 'Search slides',
+            'not_found' => 'No slides found',
+            'not_found_in_trash' => 'No slides found in trash'
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'supports' => array( 'title', 'thumbnail')
+    ));
 }
 
 ?>
