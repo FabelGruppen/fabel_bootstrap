@@ -56,7 +56,7 @@ function bootstrap_assets() {
 
 		// Load Stylesheets
 		wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/bootstrap-core/css/bootstrap.min.css' );
-		wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/font-awesome.min.css' );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css' );
 		wp_enqueue_style( 'fabel', get_template_directory_uri().'/css/style.css' );
 	
 	}
